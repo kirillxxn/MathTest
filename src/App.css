@@ -11,7 +11,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px;
+	padding: 10px;
 }
 
 .app {
@@ -19,4 +19,18 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding: 5px;
+		align-items: flex-start;
+		min-height: 100vh;
+		height: auto;
+	}
+
+	.app {
+		align-items: flex-start;
+		min-height: 100vh;
+	}
 }

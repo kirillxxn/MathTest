@@ -55,6 +55,7 @@
 	padding: 8px 15px;
 	border-radius: 20px;
 	font-weight: bold;
+	font-size: 14px;
 }
 
 .content {
@@ -144,6 +145,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 20px;
+	gap: 15px;
 }
 
 .button {
@@ -151,12 +153,13 @@
 	color: white;
 	border: none;
 	border-radius: 50px;
-	padding: 12px 25px;
+	padding: 12px 20px;
 	font-size: 16px;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	font-weight: bold;
-	min-width: 120px;
+	min-width: 100px;
+	flex-shrink: 0;
 }
 
 .button:hover {
@@ -183,6 +186,9 @@
 .questionInfo {
 	font-size: 14px;
 	color: #666;
+	text-align: center;
+	flex: 1;
+	padding: 0 10px;
 }
 
 .resultsContainer {
@@ -210,10 +216,13 @@
 	display: flex;
 	justify-content: space-around;
 	margin: 25px 0;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 .stat {
 	text-align: center;
+	min-width: 100px;
 }
 
 .statNumber {
@@ -252,4 +261,160 @@
 	gap: 15px;
 	justify-content: center;
 	flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+	.container {
+		margin: 10px;
+		border-radius: 15px;
+	}
+
+	.header {
+		padding: 15px;
+	}
+
+	.header h1 {
+		font-size: 22px;
+		margin-bottom: 8px;
+	}
+
+	.progress {
+		font-size: 16px;
+	}
+
+	.timer {
+		position: static;
+		display: inline-block;
+		margin-top: 10px;
+		font-size: 16px;
+		padding: 6px 12px;
+	}
+
+	.questionCounter {
+		font-size: 12px;
+		margin-top: 8px;
+	}
+
+	.content {
+		padding: 20px 15px;
+	}
+
+	.questionText {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+
+	.option {
+		padding: 12px 15px;
+		font-size: 14px;
+	}
+
+	.optionNumber {
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		font-size: 12px;
+		margin-right: 8px;
+	}
+
+	.buttons {
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 15px;
+	}
+
+	.button {
+		width: 100%;
+		padding: 10px 15px;
+		font-size: 14px;
+	}
+
+	.questionInfo {
+		order: -1;
+		width: 100%;
+		padding: 8px 0;
+		font-size: 13px;
+		background: #f8f9fa;
+		border-radius: 8px;
+		margin-bottom: 10px;
+	}
+
+	.score {
+		font-size: 48px;
+	}
+
+	.message {
+		font-size: 18px;
+	}
+
+	.statNumber {
+		font-size: 28px;
+	}
+
+	.statLabel {
+		font-size: 12px;
+	}
+
+	.resultsDetails {
+		padding: 15px;
+	}
+
+	.actionButtons {
+		flex-direction: column;
+	}
+
+	.actionButtons .button {
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.header h1 {
+		font-size: 20px;
+	}
+
+	.progress {
+		font-size: 14px;
+	}
+
+	.questionText {
+		font-size: 16px;
+	}
+
+	.option {
+		padding: 10px 12px;
+		font-size: 13px;
+	}
+
+	.stats {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.stat {
+		min-width: auto;
+	}
+}
+
+@media (max-width: 360px) {
+	.header {
+		padding: 12px;
+	}
+
+	.content {
+		padding: 15px 10px;
+	}
+
+	.questionText {
+		font-size: 15px;
+	}
+
+	.option {
+		padding: 8px 10px;
+	}
+
+	.button {
+		padding: 8px 12px;
+		font-size: 13px;
+	}
 }
